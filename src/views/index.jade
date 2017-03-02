@@ -1,0 +1,12 @@
+doctype html
+html
+	head
+	link(href='style.css', rel='stylesheet')
+	body
+		#nav
+			a(href='/') HOME
+			a(href='/search') SEARCH
+			a(href='/submit') SUBMIT
+	h2 users
+each user in users
+	h2=user.firstname

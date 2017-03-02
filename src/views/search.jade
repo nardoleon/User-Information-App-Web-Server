@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+	link(href='style.css', rel='stylesheet')
+	script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+
+	body
+		#nav
+			a(href='/') HOME
+			a(href='/search') SEARCH
+			a(href='/submit') SUBMIT
+	form(id = 'searchbar' action='./search' method='post' autocomplete="off")
+		input#input(name="input")
+		input(type="submit")
+	p#List
+
+	script.
+		var timedelay = 300;
+		$( "#input" ).keyup(function() {
+				var filedata = {
+								input: $("#input").val()
+						}
+				clearTimeout(timedelay);
+				$("#List").empty();
+				timer = setTimeout(function() {
+				$.post( "/searchbar", filedata, function( response, textStatus ) {
+					for (var i=0; i < response.result.length; i++){
+						$( "#List" ).append("<p>" + response.result[i] + "</p>");
+
+					};
+					});
+		},300);
+		});

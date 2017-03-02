@@ -1,0 +1,15 @@
+doctype html
+html
+	head
+	link(href='style.css', rel='stylesheet')
+	body
+		#nav
+			a(href='/') HOME
+			a(href='/search') SEARCH
+			a(href='/submit') SUBMIT
+		if match[0]
+			p #{match[0].firstname}
+			p #{match[0].lastname}
+			p #{match[0].email}
+		if !match[0]
+			p No user!

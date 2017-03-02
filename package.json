@@ -1,0 +1,26 @@
+{
+  "name": "userinformationapp",
+  "version": "1.0.0",
+  "description": "user information app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": 
+  },
+  "keywords": [
+    "userinformation"
+  ],
+  "author": "babette",
+  "license": "ISC",
+  "bugs": {
+    "url": 
+  "homepage": 
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  }
+}

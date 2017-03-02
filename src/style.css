@@ -1,0 +1,15 @@
+#nav {
+  padding: 10px;
+  background-color: green;
+  margin-bottom: 25px;
+
+}
+#nav a {
+  padding: 20px;
+  font-family: Arial;
+  color: yellow;
+}
+
+body {
+  font-family: Arial;
+}
